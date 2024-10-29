@@ -37,10 +37,12 @@ public class AdminCommand implements CommandExecutor {
             user.data().add(Node.builder("group.admin").build());
             user.data().remove(Node.builder("group.admindisabled").build());
             player.sendMessage(ChatColor.GREEN + "[PermsTool] You have been given admin permissions.");
+            player.kickPlayer(ChatColor.RED + "Permissions Changed. Please rejoin!");
         } else if (user.getPrimaryGroup().equalsIgnoreCase("admin")) {
             user.data().add(Node.builder("group.admindisabled").build());
             user.data().remove(Node.builder("group.admin").build());
             player.sendMessage(ChatColor.YELLOW + "[PermsTool] Your admin permissions have been disabled.");
+            player.kickPlayer(ChatColor.RED + "Permissions Changed. Please rejoin!");
         } else {
             player.sendMessage(ChatColor.RED + "[PermsTool] You do not have the required permissions.");
         }
