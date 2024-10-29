@@ -1,0 +1,12 @@
+name: PermsTool
+version: '1.0-SNAPSHOT'
+main: org.leminegaming.permsTool.PermsTool
+api-version: '1.21'
+authors: [ leMineGaming ]
+description: Minecraft Plugin for managing permissions
+website: http://permstool.leminegaming.software
+commands:
+  admin:
+    description: Toggles admin permissions.
+    usage: /admin
+    permission: permstool.admin
