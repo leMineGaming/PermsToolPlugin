@@ -1,5 +1,5 @@
 name: PermsTool
-version: '1.2-SNAPSHOT'
+version: '1.3-SNAPSHOT'
 main: org.leminegaming.permsTool.PermsTool
 # Keep this as low as possible: Paper refuses to load a plugin whose api-version
 # is NEWER than the server it is installed on. '1.21' is accepted by every
@@ -7,7 +7,7 @@ main: org.leminegaming.permsTool.PermsTool
 api-version: '1.21'
 authors: [ leMineGaming ]
 description: Minecraft Plugin for managing permissions
-website: http://permstool.leminegaming.software
+website: https://leminegaming.github.io/permstool
 commands:
   admin:
     description: Toggles admin permissions.
