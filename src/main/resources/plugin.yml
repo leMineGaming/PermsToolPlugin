@@ -1,6 +1,9 @@
 name: PermsTool
 version: '1.2-SNAPSHOT'
 main: org.leminegaming.permsTool.PermsTool
+# Keep this as low as possible: Paper refuses to load a plugin whose api-version
+# is NEWER than the server it is installed on. '1.21' is accepted by every
+# server from 1.21.1 up to 26.3+, so one jar works everywhere.
 api-version: '1.21'
 authors: [ leMineGaming ]
 description: Minecraft Plugin for managing permissions

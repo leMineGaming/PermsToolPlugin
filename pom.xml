@@ -6,7 +6,7 @@
 
     <groupId>org.leminegaming</groupId>
     <artifactId>permstool-plugin</artifactId>
-    <version>1.2-SNAPSHOT</version>
+    <version>1.3-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>permstool-plugin</name>
@@ -24,8 +24,7 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.13.0</version>
                 <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
+                    <release>${java.version}</release>
                 </configuration>
             </plugin>
             <plugin>
@@ -62,16 +61,22 @@
     </repositories>
 
     <dependencies>
+        <!--
+            Compiled against the OLDEST supported API (1.21.1) on purpose.
+            A single jar built against this version runs on every Paper server
+            from 1.21.1 through 26.3+, as long as only APIs present in 1.21.1
+            are used (newer APIs do not exist on old servers).
+        -->
         <dependency>
             <groupId>io.papermc.paper</groupId>
             <artifactId>paper-api</artifactId>
-            <version>1.21.5-R0.1-SNAPSHOT</version>
+            <version>1.21.1-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>net.luckperms</groupId>
             <artifactId>api</artifactId>
-            <version>5.4</version>
+            <version>5.5</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
