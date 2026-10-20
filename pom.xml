@@ -66,6 +66,11 @@
             A single jar built against this version runs on every Paper server
             from 1.21.1 through 26.3+, as long as only APIs present in 1.21.1
             are used (newer APIs do not exist on old servers).
+
+            This also covers Folia: paper-api contains the Folia scheduler API,
+            and Folia itself is a Paper fork. Folia loading is opted into with
+            'folia-supported: true' in plugin.yml. This plugin only needs the
+            Bukkit API, so the same classes run on Paper, Folia and Spigot.
         -->
         <dependency>
             <groupId>io.papermc.paper</groupId>

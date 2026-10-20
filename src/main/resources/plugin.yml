@@ -8,6 +8,11 @@ api-version: '1.21'
 authors: [ leMineGaming ]
 description: Minecraft Plugin for managing permissions
 website: https://leminegaming.github.io/permstool
+# Folia refuses to load plugins that do not explicitly opt in to regionised
+# threading. This key is ignored by Paper/Spigot, so the same jar runs on both.
+folia-supported: true
+# LuckPerms must be enabled before us; onEnable() resolves its API service.
+depend: [ LuckPerms ]
 commands:
   admin:
     description: Toggles admin permissions.

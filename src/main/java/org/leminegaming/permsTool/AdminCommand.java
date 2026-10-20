@@ -9,6 +9,14 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+/**
+ * Handles {@code /admin}.
+ *
+ * <p>Folia dispatches a player's command on the region thread that owns that
+ * player, which is the only thread allowed to touch player state (messages,
+ * kicks). Console senders are rejected below, so this executor never needs to
+ * hop schedulers and behaves identically on Paper and Folia.</p>
+ */
 public class AdminCommand implements CommandExecutor {
 
     private final LuckPerms luckPerms;
