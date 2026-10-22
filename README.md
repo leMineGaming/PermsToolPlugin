@@ -1,6 +1,6 @@
 # PermsTool Plugin
 ![test](https://badgen.net/badge/status/stable/green?icon=github)
-![test2](https://badgen.net/badge/latest/v1.3/blue?icon=version)
+![test2](https://badgen.net/badge/latest/v1.4/blue?icon=version)
 
 ![avast](https://i.ibb.co/pr2hn5z/Avast-Safe2.png)
 
